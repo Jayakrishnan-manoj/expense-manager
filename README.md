@@ -5,6 +5,7 @@ This is a personal expense manager made using Flutter. You can keep track of you
 ## Features
 
 • Add and delete transactions of specific dates
+
 • Displays a chart showing daily expenses in the week
 
 ## Built Using
