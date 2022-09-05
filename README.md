@@ -1,16 +1,20 @@
-# personal_expenses_app
+# Expense-Manager
 
-A new Flutter project.
+This is a personal expense manager made using Flutter. You can keep track of your daily transactions and can also keep track of how much you spend a week. 
 
-## Getting Started
+## Features
 
-This project is a starting point for a Flutter application.
+• Add and delete transactions of specific dates
 
-A few resources to get you started if this is your first Flutter project:
+• Displays a chart showing daily expenses in the week
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## Built Using
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+• Flutter
+
+## Screenshots
+
+![pic](https://user-images.githubusercontent.com/91311543/188283442-ce891123-3638-4e49-b34d-07c52e03efeb.jpeg)
+![pic_2](https://user-images.githubusercontent.com/91311543/188283491-da21e3bb-509c-4161-b4c4-9060f9db7f16.jpeg)
+![pic_3](https://user-images.githubusercontent.com/91311543/188283512-d33e4fe8-5490-462a-a9bc-9c733b1469bd.jpeg)
+
