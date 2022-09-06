@@ -1,3 +1,5 @@
+//ignore_for_file: sized_box_for_whitespace, use_key_in_widget_constructors
+
 import 'package:flutter/material.dart';
 
 class Bars extends StatelessWidget {
@@ -5,7 +7,7 @@ class Bars extends StatelessWidget {
   final double spendingAmount;
   final double spendingPctOfTotal;
 
-  Bars(this.label, this.spendingAmount, this.spendingPctOfTotal);
+  const Bars(this.label, this.spendingAmount, this.spendingPctOfTotal);
 
   @override
   Widget build(BuildContext context) {

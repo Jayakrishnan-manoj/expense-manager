@@ -1,4 +1,4 @@
-import 'dart:ui';
+// ignore_for_file: use_key_in_widget_constructors, sized_box_for_whitespace
 
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
@@ -10,39 +10,39 @@ class TransactionList extends StatelessWidget {
   final List<Transaction> transactions;
   final Function deleteTx;
 
-  TransactionList(this.transactions,this.deleteTx);
+  const TransactionList(this.transactions, this.deleteTx);
 
   @override
   Widget build(BuildContext context) {
     return transactions.isEmpty
-        ?LayoutBuilder(builder: ((context, constraints) {
-          return Column(
-            children: [
-              Text(
-                'No transactions yet!',
-                style: TextStyle(
-                  fontWeight: FontWeight.bold,
-                  fontSize: 25,
+        ? LayoutBuilder(builder: ((context, constraints) {
+            return Column(
+              children: [
+                const Text(
+                  'No transactions yet!',
+                  style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 25,
+                  ),
                 ),
-              ),
-              SizedBox(
-                height: 20,
-              ),
-              Container(
-                height: constraints.maxHeight* 0.5,
-                child: Image.asset(
-                  'assets/image/waiting.png',
-                  fit: BoxFit.cover,
+                const SizedBox(
+                  height: 20,
                 ),
-              ),
-            ],
-          );
-        })) 
+                Container(
+                  height: constraints.maxHeight * 0.5,
+                  child: Image.asset(
+                    'assets/image/waiting.png',
+                    fit: BoxFit.cover,
+                  ),
+                ),
+              ],
+            );
+          }))
         : ListView.builder(
             itemBuilder: (ctx, index) {
               return Card(
                 elevation: 5,
-                margin: EdgeInsets.symmetric(
+                margin: const EdgeInsets.symmetric(
                   vertical: 8,
                   horizontal: 5,
                 ),
@@ -50,14 +50,14 @@ class TransactionList extends StatelessWidget {
                   leading: CircleAvatar(
                       radius: 30,
                       child: Padding(
-                        padding: EdgeInsets.all(6),
+                        padding: const EdgeInsets.all(6),
                         child: FittedBox(
                           child: Text('\$${transactions[index].amount}'),
                         ),
                       )),
                   title: Text(
                     transactions[index].title,
-                    style: TextStyle(
+                    style: const TextStyle(
                       fontWeight: FontWeight.bold,
                     ),
                   ),
@@ -66,7 +66,7 @@ class TransactionList extends StatelessWidget {
                   ),
                   trailing: IconButton(
                     onPressed: () => deleteTx(transactions[index].id),
-                    icon: Icon(Icons.delete),
+                    icon: const Icon(Icons.delete),
                     color: Theme.of(context).errorColor,
                   ),
                 ),

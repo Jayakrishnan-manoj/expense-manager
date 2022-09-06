@@ -1,3 +1,5 @@
+// ignore_for_file: sized_box_for_whitespace, use_key_in_widget_constructors
+
 import 'package:flutter/material.dart';
 import 'package:personal_expenses_app/widgets/new_transactions.dart';
 import '../models/transaction.dart';
@@ -18,7 +20,7 @@ class _HomeScreenState extends State<HomeScreen> {
     return _userTransactions.where((tx) {
       return tx.date.isAfter(
         DateTime.now().subtract(
-          Duration(days: 7),
+          const Duration(days: 7),
         ),
       );
     }).toList();
@@ -38,15 +40,14 @@ class _HomeScreenState extends State<HomeScreen> {
     });
   }
 
-  //const HomeScreen({Key? key}) : super(key: key);
   void _startAddNewTransaction(BuildContext ctx) {
     showModalBottomSheet(
         context: ctx,
         builder: (_) {
           return GestureDetector(
             onTap: () {},
-            child: NewTransactions(_addNewTransaction),
             behavior: HitTestBehavior.opaque,
+            child: NewTransactions(_addNewTransaction),
           );
         });
   }
@@ -60,8 +61,7 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     final mediaQuery = MediaQuery.of(context);
-    final isLandscape =
-        mediaQuery.orientation == Orientation.landscape;
+    final isLandscape = mediaQuery.orientation == Orientation.landscape;
     final appBar = AppBar(
       title: const Text('Expenses App'),
       actions: [
@@ -90,7 +90,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Text('Show Chart'),
+                    const Text('Show Chart'),
                     Switch(
                         value: _showChart,
                         onChanged: (val) {
